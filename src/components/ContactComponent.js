@@ -18,6 +18,6 @@ const Wrapper = styled("div")`
 export default () => (
     <Wrapper>
         <Typography variant="h2">Contact me</Typography>
-        <Button variant="contained" color="primary">Send me an e-mail</Button>
+        <Button variant="contained" color="primary" href="mailto:info@ellenlangelaar.nl">Send me an e-mail</Button>
     </Wrapper>
 );
