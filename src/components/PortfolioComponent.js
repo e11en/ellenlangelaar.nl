@@ -19,7 +19,7 @@ export default () => (
         <Header variant="h2">Portfolio</Header>
 
         <Masonry>
-            <Card className="card" title="Tedas" img="tedas-uniscope-2020.png" description="Command & Control platform voor vitale infrastructuur." />
+            <Card className="card" title="Tedas" img="tedas-uniscope-2020.png" description="Command and control platform for security infrastructures." />
             <Card className="card" title="Thinkwise" img="thinkwise-universal-2019.png" description="New user interface for low code applications, made with React." />
             <Card className="card" title="Thinkwise" img="thinkwise-2019.png" description="User interface for low code applications, made with C#." />
             <Card className="card" title="Coding Blog" img="blog-2018.png" description="My personal coding blog, made with Hugo." />
