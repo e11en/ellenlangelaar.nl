@@ -42,6 +42,7 @@ export default () => (
             <Skill name="React" img="react.png" />
             <Skill name="Scrum" img="scrum.png" />
             <Skill name="SQL" img="sql.png" />
+            <Skill name="UFT" img="uft.png" />
         </Skills>
     </Wrapper>
 );
