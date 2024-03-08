@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
+import { Typography } from "@mui/material";
 import styled from "styled-components";
 import ReactTypingEffect from 'react-typing-effect';
 
@@ -39,18 +39,18 @@ const Text = styled(Typography)`
 
 
 export default () => (
-    <Header>
-        <Logo src={process.env.PUBLIC_URL + '/img/ellenlangelaar.png'} alt="Ellen Langelaar Logo" />
-        <Text variant="h2">Hi, I am Ellen. I create</Text>
-        <Text variant="h2">
-            <ReactTypingEffect typingDelay={100} eraseDelay={100} 
-            text={["applications.",
-                    "back-end systems.",
-                    "micro services.",
-                    "custom solutions.",
-                    "databases.",
-                    "web applications.",
-                    "desktop applications."]}/>
-        </Text>
-    </Header>
+  <Header>
+    <Logo
+      src={process.env.PUBLIC_URL + "/img/ellenlangelaar.png"}
+      alt="Ellen Langelaar Logo"
+    />
+    <Text variant="h2">Hi, I am Ellen and I </Text>
+    <Text variant="h2">
+      <ReactTypingEffect
+        typingDelay={100}
+        eraseDelay={100}
+        text={["create solutions.", "build teams.", "innovate business.", "create architectures.", "lead amazing teams.", "innovate IT", "build applications"]}
+      />
+    </Text>
+  </Header>
 );

@@ -1,7 +1,5 @@
 import React from "react";
-import { Button, Typography } from "@material-ui/core";
-import IconButton from '@material-ui/core/IconButton';
-import { GitHub, LinkedIn, Create } from '@material-ui/icons';
+import { Button, Typography } from "@mui/material";
 import styled from "styled-components";
 
 const Wrapper = styled("div")`
@@ -15,6 +13,7 @@ const Wrapper = styled("div")`
 
 const Text = styled(Typography)`
     && {
+        font-size: 0.6em;
         text-align: center;
         font-weight: 500;
         margin: 1em;
@@ -23,21 +22,7 @@ const Text = styled(Typography)`
 
 export default () => (
     <Wrapper>
-        <div>
-            <IconButton color="secondary" aria-label="LinkedIn" href="http://www.linkedin.com/in/ellenlangelaar" target="_blank">
-                <LinkedIn />
-            </IconButton>
-
-            <IconButton color="secondary" aria-label="GitHub" href="https://github.com/e11en" target="_blank">
-                <GitHub />
-            </IconButton>
-
-            <IconButton color="secondary" aria-label="GitHub" href="http://blog.ellenlangelaar.nl" target="_blank">
-                <Create />
-            </IconButton>
-        </div>
-
-        <Text>MADE BY ELLEN LANGELAAR © 2020</Text>
+        <Text>MADE BY ELLEN LANGELAAR © 2024</Text>
 
         <Button href="privacy-statement" color="secondary" variant="outlined">Privacy Statement</Button>
     </Wrapper>

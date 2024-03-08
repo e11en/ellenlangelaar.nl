@@ -1,9 +1,5 @@
 import React from "react";
-import {
-    Card,
-    CardContent,
-    Typography
-} from '@material-ui/core';
+import { Card, CardContent, Typography } from "@mui/material";
 import styled from "styled-components";
 
 const StyledCard = styled(Card)`
