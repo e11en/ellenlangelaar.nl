@@ -18,7 +18,7 @@ const theme = createTheme({
   },
 });
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>

@@ -24,7 +24,7 @@ const BigIconButton = styled(IconButton)`
   }
 `;
 
-export default () => (
+const ContactComponent = () => (
   <Wrapper>
     <Typography variant="h2">Contact me</Typography>
     <div>
@@ -57,4 +57,6 @@ export default () => (
       </BigIconButton>
     </div>
   </Wrapper>
-);
+ );
+
+ export default ContactComponent;

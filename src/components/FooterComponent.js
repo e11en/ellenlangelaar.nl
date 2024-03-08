@@ -20,10 +20,12 @@ const Text = styled(Typography)`
     }
 `;
 
-export default () => (
+const FooterComponent = () => (
     <Wrapper>
         <Text>MADE BY ELLEN LANGELAAR © 2024</Text>
 
         <Button href="privacy-statement" color="secondary" variant="outlined">Privacy Statement</Button>
     </Wrapper>
-);
+ );
+
+ export default FooterComponent;

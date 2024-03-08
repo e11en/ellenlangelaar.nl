@@ -33,7 +33,7 @@ const Description = styled(Typography)`
     border-top: 1px solid #E1E1E1;
 `;
 
-export default ({ title, img, description, ...props }) => (
+const CardComponent = ({ title, img, description, ...props }) => (
     <StyledCard {...props}>
         <CardContent>
             <Title>{title}</Title>
@@ -41,4 +41,6 @@ export default ({ title, img, description, ...props }) => (
             <Description>{description}</Description>
         </CardContent>
     </StyledCard>
-);
+ );
+
+ export default CardComponent;

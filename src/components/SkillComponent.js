@@ -7,8 +7,10 @@ const Image = styled("img")`
     margin-left: 1em;
 `;
 
-export default ({name, img}) => (
+const SkillComponent = ({name, img}) => (
     <Tooltip title={name}>
         <Image alt={name} src={process.env.PUBLIC_URL + '/img/skills/' + img} />
     </Tooltip>
-);
+ );
+
+ export default SkillComponent;

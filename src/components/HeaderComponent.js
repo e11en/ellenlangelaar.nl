@@ -38,7 +38,7 @@ const Text = styled(Typography)`
 `;
 
 
-export default () => (
+const HeaderComponent = () => (
   <Header>
     <Logo
       src={process.env.PUBLIC_URL + "/img/ellenlangelaar.png"}
@@ -53,4 +53,6 @@ export default () => (
       />
     </Text>
   </Header>
-);
+ );
+
+ export default HeaderComponent;

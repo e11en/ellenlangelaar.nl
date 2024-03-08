@@ -5,7 +5,7 @@ import Contact from "../components/ContactComponent";
 import Skills from "../components/SkillsComponent";
 import Footer from "../components/FooterComponent";
 
-export default () => (
+const HomePage = () => (
     <React.Fragment>
         <Header />
 
@@ -15,4 +15,6 @@ export default () => (
 
         <Footer />
     </React.Fragment>
-);
+ );
+
+ export default HomePage;

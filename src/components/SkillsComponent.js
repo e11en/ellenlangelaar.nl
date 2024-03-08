@@ -24,7 +24,7 @@ const Skills = styled("div")`
     justify-content: center;
 `;
 
-export default () => (
+const SkillsComponent = () => (
   <Wrapper>
     <Typography variant="h2">Skills</Typography>
     <Skills>
@@ -44,4 +44,6 @@ export default () => (
       <Skill name="UFT" img="uft.png" />
     </Skills>
   </Wrapper>
-);
+ );
+
+ export default SkillsComponent;

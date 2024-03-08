@@ -6,7 +6,7 @@ const Wrapper = styled("div")`
     padding: 1em;
 `;
 
-export default () => (
+const PrivacyStatementPage = () => (
     <Wrapper>
         <Button href="/" color="primary" variant="outlined">Back</Button>
 
@@ -33,4 +33,6 @@ export default () => (
         <h3>Google privacy statement</h3>
         <p>Deze website maakt gebruik van Google Analytics, een webanalyse-service die wordt aangeboden door Google Inc. (“Google”). Google Analytics maakt gebruik van “cookies” (tekstbestandjes die op Uw computer worden geplaatst) om de website te helpen analyseren hoe gebruikers de site gebruiken. De door het cookie gegenereerde informatie over uw gebruik van de website (In het geval van EllenLangelaar.nl zonder uw IP-adres) wordt overgebracht naar en door Google opgeslagen op servers in de Verenigde Staten. Google gebruikt deze informatie om bij te houden hoe u deze website gebruikt, rapporten over de website-activiteit op te stellen voor de eigenaar van deze website (Hayona BV) en andere diensten aan te bieden met betrekking tot website-activiteit en internetgebruik. Google mag deze informatie alleen aan derden verschaffen indien Google hiertoe wettelijk wordt verplicht, of voor zover deze derden de informatie namens Google verwerken. Google zal Uw IP-adres niet combineren met andere gegevens waarover Google beschikt. U kunt het gebruik van cookies weigeren door in Uw browser de daarvoor geëigende instellingen te kiezen. Wij wijzen u er echter op dat u in dat geval wellicht niet alle mogelijkheden van deze website kunt benutten. Door gebruik te maken van deze website geeft u toestemming voor het verwerken van de informatie door Google op de wijze en voor de doeleinden zoals hiervoor omschreven.</p>
     </Wrapper>
-);
+ );
+
+ export default PrivacyStatementPage;
