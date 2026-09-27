@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { links, stations, START_X, type StationId } from "./content";
 import { Engine } from "./engine";
+import { track } from "../analytics";
 import { Globe } from "./Globe";
 import { gemIcons, gemKinds, sectorName, type GemKind } from "./space";
 import { Panel } from "./Panels";
@@ -26,8 +27,16 @@ export default function Game() {
   useEffect(() => {
     const canvas = canvasRef.current!;
     const engine = new Engine(canvas, {
-      onOpen: (id) => id !== "rocket" && setOpen(id),
-      onCrash: (score, best, isNewBest, gems) => setCrash({ score, best, isNewBest, gems, sector: engine.space?.sector ?? 1 }),
+      onOpen: (id) => {
+        if (id === "rocket") return;
+        setOpen(id);
+        track("open_station", { station: id });
+      },
+      onCrash: (score, best, isNewBest, gems) => {
+        const sector = engine.space?.sector ?? 1;
+        setCrash({ score, best, isNewBest, gems, sector });
+        track("space_run_end", { score, sector });
+      },
     });
     engineRef.current = engine;
     // Lets you drive the game from devtools, even in a background tab where requestAnimationFrame is paused.
@@ -78,10 +87,15 @@ export default function Game() {
     // The hint bubble, progress bar and walking state only need a few updates per second.
     let moved = false;
     let lastSector = 1;
+    let lastMode = engine.mode;
     const poll = window.setInterval(() => {
       const x = engine.playerX();
       if (Math.abs(x - START_X) > 30) moved = true;
       const next: Hint = engine.aboard ? null : engine.near ? { kind: "near", id: engine.near } : moved ? null : { kind: "start" };
+      if (engine.mode !== lastMode) {
+        if (engine.mode === "space") track("space_run_start");
+        lastMode = engine.mode;
+      }
       setMode(engine.mode);
       if (!engine.space) lastSector = 1;
       if (engine.space) {
@@ -129,6 +143,7 @@ export default function Game() {
     const engine = engineRef.current!;
     engine.paused = false;
     engine.teleport(id);
+    track("teleport", { station: id });
     setProgress(engine.playerX());
     // let the beam play before the panel covers it
     if (openAfter) window.setTimeout(() => engine.goTo(id), 450);
